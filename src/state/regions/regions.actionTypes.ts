@@ -1,0 +1,1 @@
+export const REGIONS_LIST_SET = "REGIONS_LIST_SET";
