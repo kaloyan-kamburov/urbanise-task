@@ -131,10 +131,11 @@ const ItemsListPage: React.FC<Props> = () => {
   );
 
   useEffect(() => {
+    //check if items and regions are not loaded (in case page is open directly)
     !items.length && getItems();
     !regions.length && getRegions();
 
-    // return () => abortController.abort();
+    return () => abortController.abort();
   }, []);
 
   return isLoadingItems || isLoadingRegions ? (
